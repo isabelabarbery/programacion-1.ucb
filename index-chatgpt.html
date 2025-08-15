@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Algoritmos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ====== ESTILOS GENERALES ====== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        /* ====== CABECERA ====== */
+        header {
+            background-color: #12446D; /* Color secundario */
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* ====== CONTENIDO PRINCIPAL ====== */
+        main {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        button {
+            background-color: #FFD527; /* Color primario */
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #12446D;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e6c122;
+            transform: scale(1.05);
+        }
+
+        /* ====== PIE DE PÁGINA ====== */
+        footer {
+            background-color: #12446D;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* ====== RESPONSIVIDAD ====== */
+        @media (max-width: 600px) {
+            header, main, footer {
+                padding: 1rem;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        Proyecto de Algoritmos
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <h1>Bienvenido</h1>
+        <p>Haz clic en el botón para ejecutar <strong>"mi primer algoritmo"</strong>.</p>
+        <button onclick="miPrimerAlgoritmo()">Ejecutar Algoritmo</button>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        &copy; 2025 - Todos los derechos reservados
+    </footer>
+
+    <!-- Archivo con funciones y algoritmos -->
+    <script src="aprendiendo.js"></script>
+</body>
+</html>
