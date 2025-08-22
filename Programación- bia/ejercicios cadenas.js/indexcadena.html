@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Texto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="cadenas.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Análisis de Texto</h1>
+        <p>Herramienta profesional para contar vocales, palabras y caracteres.</p>
+    </header>
+
+    <main>
+        <section class="analisis-container">
+            <h2>Ingresa tu texto</h2>
+            <textarea id="textoInput" placeholder="Escribe aquí tu texto..." rows="10"></textarea>
+            
+            <div class="botones">
+                <button onclick="mostrarResultado('vocales')">Contar Vocales</button>
+                <button onclick="mostrarResultado('palabras')">Contar Palabras</button>
+                <button onclick="mostrarResultado('caracteres')">Contar Caracteres</button>
+            </div>
+            
+            <div class="resultado" id="resultadoDiv">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Herramientas Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function mostrarResultado(tipo) {
+            const texto = document.getElementById('textoInput').value;
+            const resultadoDiv = document.getElementById('resultadoDiv');
+            let resultado = 0;
+            let mensaje = '';
+
+            // Las siguientes funciones (ContarVocales, ContarPalabras, ContarCaracteres)
+            // deben estar definidas en el archivo 'cadenas.js'
+            if (tipo === 'vocales') {
+                resultado = ContarVocales(texto);
+                mensaje = `El texto tiene ${resultado} vocales.`;
+            } else if (tipo === 'palabras') {
+                resultado = ContarPalabras(texto);
+                mensaje = `El texto tiene ${resultado} palabras.`;
+            } else if (tipo === 'caracteres') {
+                resultado = ContarCaracteres(texto);
+                mensaje = `El texto tiene ${resultado} caracteres.`;
+            }
+
+            resultadoDiv.innerHTML = `<p>${mensaje}</p>`;
+        }
+    </script>
+</body>
+</html>
