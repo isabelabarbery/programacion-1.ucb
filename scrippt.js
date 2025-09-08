@@ -134,3 +134,23 @@ function crearTabla(datos) {
   tabla += '</tbody></table>';
   document.getElementById("tabla-container").innerHTML = tabla;
 }
+
+function cargarColores() {
+  const colores = ["Rojo", "Verde", "Azul", "Amarillo","Morado" ];
+  const select = document.getElementById("colorSelect"); 
+
+  colores.forEach(color =>{
+    const option = document.createElement("option");
+    option.value=color.toLowerCase();
+    option.textContent=color;
+    select.appendChild(option);
+  });
+}
+
+cargarColores();
+
+function mostrarColor(){
+  const select = document.getElementById("colorSelect");
+  const valor = select.value;
+  alert(valor);
+}
